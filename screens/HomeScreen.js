@@ -9,32 +9,77 @@ import {
 
 export default class Infinite extends Component {
   state = {
-    rotateValue: new Animated.Value(0),
-    rotateValue2: new Animated.Value(0),
+    pulseValue1: new Animated.Value(0),
+    pulseValue2: new Animated.Value(0),
+    pulseValue3: new Animated.Value(0),
+    pulseValue4: new Animated.Value(0),
+    pulseValue5: new Animated.Value(0),
+    pulseValue6: new Animated.Value(0),
     counter1: 0,
     counter2: 0,
+    counter3: 0,
+    counter4: 0,
+    counter5: 0,
+    counter6: 0,
 
   };
 
-  componentDidMount() {
-    this._start();
-  }
+  // componentDidMount() {
+  //   this._start();
+  // }
+
   _start = () => {
     Animated.loop(
-      Animated.timing(this.state.rotateValue, {
-        toValue: 1,
-        duration: 845.08,
-        Infinite: true
-      })
-    ).start();
-    Animated.loop(
-      Animated.timing(this.state.rotateValue2, {
-        toValue: 1,
-        duration: 845.08,
-        Infinite: true
-      })
-    ).start();
+      Animated.sequence([
+        Animated.timing(this.state.pulseValue1, {
+          toValue: 1,
+          duration: 845.08,
+          // Infinite: true
+        }),
+        Animated.timing(this.state.pulseValue2, {
+          toValue: 1,
+          duration: 845.08,
+          // Infinite: true
+        }),
+        Animated.timing(this.state.pulseValue3, {
+          toValue: 1,
+          duration: 845.08,
+          // Infinite: true
+        }),
+        Animated.timing(this.state.pulseValue4, {
+          toValue: 1,
+          duration: 845.08,
+          // Infinite: true
+        }),
+        Animated.timing(this.state.pulseValue5, {
+          toValue: 1,
+          duration: 845.08,
+          // Infinite: true
+        }),
+        Animated.timing(this.state.pulseValue5, {
+          toValue: 1,
+          duration: 845.08,
+          // Infinite: true
+        }),
+      ]), {iterations: -1}).start();
   };
+
+  // _start = () => {
+  //   Animated.loop(
+  //     Animated.timing(this.state.rotateValue, {
+  //       toValue: 1,
+  //       duration: 845.08,
+  //       Infinite: true
+  //     })
+  //   ).start();
+  //   Animated.loop(
+  //     Animated.timing(this.state.rotateValue2, {
+  //       toValue: 1,
+  //       duration: 845.08,
+  //       Infinite: true
+  //     })
+  //   ).start();
+  // };
 
   countUp = () => {
     this.setState({counter1: this.state.counter1 + 1})
@@ -46,6 +91,9 @@ export default class Infinite extends Component {
   render() {
     return (
       <>
+        <TouchableOpacity onPress={this._start}>
+          <Text style={styles.text}>Start</Text>
+        </TouchableOpacity>
         <View style={styles.container1}>
         <TouchableOpacity onPress={this.countUp}>
           <Animated.View
