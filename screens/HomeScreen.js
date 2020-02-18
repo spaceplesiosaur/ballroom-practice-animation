@@ -108,13 +108,13 @@ export default class Infinite extends Component {
                   {
                     scaleX: this.state.pulseValue1.interpolate({
                       inputRange: [0, 2],
-                      outputRange: [-3, 0]
+                      outputRange: [3, 0]
                     })
                   },
                   {
                     scaleY: this.state.pulseValue1.interpolate({
                       inputRange: [0, 2],
-                      outputRange: [-3, 0]
+                      outputRange: [3, 0]
                     })
                   }
                 ],
@@ -137,13 +137,13 @@ export default class Infinite extends Component {
                   {
                     scaleX: this.state.pulseValue2.interpolate({
                       inputRange: [0, 2],
-                      outputRange: [-3, 0]
+                      outputRange: [3, 0]
                     })
                   },
                   {
                     scaleY: this.state.pulseValue2.interpolate({
                       inputRange: [0, 2],
-                      outputRange: [-3, 0]
+                      outputRange: [3, 0]
                     })
                   }
                 ],
@@ -166,13 +166,13 @@ export default class Infinite extends Component {
                   {
                     scaleX: this.state.pulseValue3.interpolate({
                       inputRange: [0, 2],
-                      outputRange: [-3, 0]
+                      outputRange: [3, 0]
                     })
                   },
                   {
                     scaleY: this.state.pulseValue3.interpolate({
                       inputRange: [0, 2],
-                      outputRange: [-3, 0]
+                      outputRange: [3, 0]
                     })
                   }
                 ],
@@ -195,13 +195,13 @@ export default class Infinite extends Component {
                   {
                     scaleX: this.state.pulseValue4.interpolate({
                       inputRange: [0, 2],
-                      outputRange: [-3, 0]
+                      outputRange: [3, 0]
                     })
                   },
                   {
                     scaleY: this.state.pulseValue4.interpolate({
                       inputRange: [0, 2],
-                      outputRange: [-3, 0]
+                      outputRange: [3, 0]
                     })
                   }
                 ],
@@ -224,13 +224,13 @@ export default class Infinite extends Component {
                   {
                     scaleX: this.state.pulseValue5.interpolate({
                       inputRange: [0, 2],
-                      outputRange: [-3, 0]
+                      outputRange: [3, 0]
                     })
                   },
                   {
                     scaleY: this.state.pulseValue5.interpolate({
                       inputRange: [0, 2],
-                      outputRange: [-3, 0]
+                      outputRange: [3, 0]
                     })
                   }
                 ],
@@ -253,13 +253,13 @@ export default class Infinite extends Component {
                   {
                     scaleX: this.state.pulseValue6.interpolate({
                       inputRange: [0, 2],
-                      outputRange: [-3, 0]
+                      outputRange: [3, 0]
                     })
                   },
                   {
                     scaleY: this.state.pulseValue6.interpolate({
                       inputRange: [0, 2],
-                      outputRange: [-3, 0]
+                      outputRange: [3, 0]
                     })
                   }
                 ],
