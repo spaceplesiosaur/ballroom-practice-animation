@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Numbers from "../components/Numbers"
 import {
   Text,
   View,
@@ -24,139 +25,254 @@ export default class Infinite extends Component {
 
   };
 
-  // componentDidMount() {
-  //   this._start();
-  // }
 
   _start = () => {
     Animated.loop(
       Animated.sequence([
         Animated.timing(this.state.pulseValue1, {
           toValue: 1,
-          duration: 845.08,
+          duration: 439.61519,
           // Infinite: true
         }),
         Animated.timing(this.state.pulseValue2, {
           toValue: 1,
-          duration: 845.08,
+          duration: 439.61519,
           // Infinite: true
         }),
         Animated.timing(this.state.pulseValue3, {
           toValue: 1,
-          duration: 845.08,
+          duration: 439.61519,
           // Infinite: true
         }),
         Animated.timing(this.state.pulseValue4, {
           toValue: 1,
-          duration: 845.08,
+          duration: 439.61519,
           // Infinite: true
         }),
         Animated.timing(this.state.pulseValue5, {
           toValue: 1,
-          duration: 845.08,
+          duration: 439.61519,
           // Infinite: true
         }),
-        Animated.timing(this.state.pulseValue5, {
+        Animated.timing(this.state.pulseValue6, {
           toValue: 1,
-          duration: 845.08,
+          duration: 439.61519,
           // Infinite: true
         }),
-      ]), {iterations: -1}).start();
+      ]), {iterations: -1, useNativeDriver: true}).start();
   };
 
-  // _start = () => {
-  //   Animated.loop(
-  //     Animated.timing(this.state.rotateValue, {
-  //       toValue: 1,
-  //       duration: 845.08,
-  //       Infinite: true
-  //     })
-  //   ).start();
-  //   Animated.loop(
-  //     Animated.timing(this.state.rotateValue2, {
-  //       toValue: 1,
-  //       duration: 845.08,
-  //       Infinite: true
-  //     })
-  //   ).start();
-  // };
-
-  countUp = () => {
+  countUp1 = () => {
     this.setState({counter1: this.state.counter1 + 1})
   }
 
   countUp2 = () => {
     this.setState({counter2: this.state.counter2 + 1})
   }
+
+  countUp3 = () => {
+    this.setState({counter3: this.state.counter3 + 1})
+  }
+
+  countUp4 = () => {
+    this.setState({counter4: this.state.counter4 + 1})
+  }
+
+  countUp5 = () => {
+    this.setState({counter5: this.state.counter5 + 1})
+  }
+
+  countUp6 = () => {
+    this.setState({counter6: this.state.counter6 + 1})
+  }
+
   render() {
     return (
       <>
         <TouchableOpacity onPress={this._start}>
           <Text style={styles.text}>Start</Text>
         </TouchableOpacity>
-        <View style={styles.container1}>
-        <TouchableOpacity onPress={this.countUp}>
-          <Animated.View
-            style={{
-              transform: [
-                {
-                  scaleX: this.state.rotateValue.interpolate({
-                    inputRange: [0, 2],
-                    outputRange: [-3, 0]
-                  })
-                },
-                {
-                  scaleY: this.state.rotateValue.interpolate({
-                    inputRange: [0, 2],
-                    outputRange: [-3, 0]
-                  })
-                }
-              ],
-              height: 50,
-              width: 50,
-              margin: 5,
-              borderWidth: 50,
-              borderColor: "#FE7F9C",
-              borderBottomColor: "#FE7F9C",
-              borderRadius: 50,
-              justifyContent: "center"
-            }}
-          />
-
+        <View style={styles.numberView}>
           <Text style={styles.text}>{this.state.counter1.toString()}</Text>
-          <Animated.View />
-          </TouchableOpacity>
+          <Text style={styles.text}>{this.state.counter2.toString()}</Text>
+          <Text style={styles.text}>{this.state.counter3.toString()}</Text>
+          <Text style={styles.text}>{this.state.counter4.toString()}</Text>
+          <Text style={styles.text}>{this.state.counter5.toString()}</Text>
+          <Text style={styles.text}>{this.state.counter6.toString()}</Text>
         </View>
-        <View style={styles.container}>
-        <TouchableOpacity onPress={this.countUp2}>
+        <View style={styles.container1}>
+          <TouchableOpacity onPress={this.countUp1}>
             <Animated.View
               style={{
                 transform: [
                   {
-                    scaleX: this.state.rotateValue.interpolate({
-                      inputRange: [0, 0],
+                    scaleX: this.state.pulseValue1.interpolate({
+                      inputRange: [0, 2],
                       outputRange: [-3, 0]
                     })
                   },
                   {
-                    scaleY: this.state.rotateValue.interpolate({
+                    scaleY: this.state.pulseValue1.interpolate({
                       inputRange: [0, 2],
                       outputRange: [-3, 0]
                     })
                   }
                 ],
-                height: 50,
-                width: 50,
-                margin: 5,
-                borderWidth: 50,
-                borderColor: "#A1C4FD",
-                borderBottomColor: "#A1C4FD",
-                borderRadius: 50,
+                height: 10,
+                width: 10,
+                margin: 10,
+                borderWidth: 10,
+                borderColor: "#F60091",
+                borderBottomColor: "#F60091",
+                borderRadius: 10,
                 justifyContent: "center"
               }}
             />
-
-            <Text style={styles.text}>{this.state.counter2.toString()} </Text>
+            <Animated.View />
+          </TouchableOpacity>
+          <TouchableOpacity onPress={this.countUp2}>
+            <Animated.View
+              style={{
+                transform: [
+                  {
+                    scaleX: this.state.pulseValue2.interpolate({
+                      inputRange: [0, 2],
+                      outputRange: [-3, 0]
+                    })
+                  },
+                  {
+                    scaleY: this.state.pulseValue2.interpolate({
+                      inputRange: [0, 2],
+                      outputRange: [-3, 0]
+                    })
+                  }
+                ],
+                height: 10,
+                width: 10,
+                margin: 10,
+                borderWidth: 10,
+                borderColor: "#F6811F",
+                borderBottomColor: "#F6811F",
+                borderRadius: 10,
+                justifyContent: "center"
+              }}
+            />
+            <Animated.View />
+          </TouchableOpacity>
+          <TouchableOpacity onPress={this.countUp3}>
+            <Animated.View
+              style={{
+                transform: [
+                  {
+                    scaleX: this.state.pulseValue3.interpolate({
+                      inputRange: [0, 2],
+                      outputRange: [-3, 0]
+                    })
+                  },
+                  {
+                    scaleY: this.state.pulseValue3.interpolate({
+                      inputRange: [0, 2],
+                      outputRange: [-3, 0]
+                    })
+                  }
+                ],
+                height: 10,
+                width: 10,
+                margin: 10,
+                borderWidth: 10,
+                borderColor: "#FFEB00",
+                borderBottomColor: "#FFEB00",
+                borderRadius: 10,
+                justifyContent: "center"
+              }}
+            />
+            <Animated.View />
+          </TouchableOpacity>
+          <TouchableOpacity onPress={this.countUp4}>
+            <Animated.View
+              style={{
+                transform: [
+                  {
+                    scaleX: this.state.pulseValue4.interpolate({
+                      inputRange: [0, 2],
+                      outputRange: [-3, 0]
+                    })
+                  },
+                  {
+                    scaleY: this.state.pulseValue4.interpolate({
+                      inputRange: [0, 2],
+                      outputRange: [-3, 0]
+                    })
+                  }
+                ],
+                height: 10,
+                width: 10,
+                margin: 10,
+                borderWidth: 10,
+                borderColor: "#71C043",
+                borderBottomColor: "#71C043",
+                borderRadius: 10,
+                justifyContent: "center"
+              }}
+            />
+            <Animated.View />
+          </TouchableOpacity>
+          <TouchableOpacity onPress={this.countUp5}>
+            <Animated.View
+              style={{
+                transform: [
+                  {
+                    scaleX: this.state.pulseValue5.interpolate({
+                      inputRange: [0, 2],
+                      outputRange: [-3, 0]
+                    })
+                  },
+                  {
+                    scaleY: this.state.pulseValue5.interpolate({
+                      inputRange: [0, 2],
+                      outputRange: [-3, 0]
+                    })
+                  }
+                ],
+                height: 10,
+                width: 10,
+                margin: 10,
+                borderWidth: 10,
+                borderColor: "#03ABF0",
+                borderBottomColor: "#03ABF0",
+                borderRadius: 10,
+                justifyContent: "center"
+              }}
+            />
+            <Animated.View />
+          </TouchableOpacity>
+          <TouchableOpacity onPress={this.countUp6}>
+            <Animated.View
+              style={{
+                transform: [
+                  {
+                    scaleX: this.state.pulseValue6.interpolate({
+                      inputRange: [0, 2],
+                      outputRange: [-3, 0]
+                    })
+                  },
+                  {
+                    scaleY: this.state.pulseValue6.interpolate({
+                      inputRange: [0, 2],
+                      outputRange: [-3, 0]
+                    })
+                  }
+                ],
+                height: 10,
+                width: 10,
+                margin: 10,
+                borderWidth: 10,
+                borderColor: "#6F2C8F",
+                borderBottomColor: "#6F2C8F",
+                borderRadius: 10,
+                justifyContent: "center"
+              }}
+            />
             <Animated.View />
           </TouchableOpacity>
         </View>
@@ -166,16 +282,20 @@ export default class Infinite extends Component {
 }
 
 const styles = StyleSheet.create({
-  container2: {
-    flex: 1,
-    backgroundColor: "#FFF",
-    alignItems: "flex-start",
-    justifyContent: "center"
-  },
   container1: {
+    display: "flex",
     flex: 1,
+    flexDirection: "row",
     backgroundColor: "#FFF",
-    alignItems: "flex-end",
+    alignItems: "center",
+    justifyContent: "space-around"
+  },
+  numberView: {
+    display: "flex",
+    flex: 1,
+    flexDirection: "row",
+    backgroundColor: "#FFF",
+    alignItems: "center",
     justifyContent: "center"
   },
   item: {},
@@ -189,9 +309,10 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 20,
-    color: "#fff",
+    color: "#000000",
     fontWeight: "bold",
-    textAlign: "center"
+    textAlign: "center",
+    margin: 10
   },
   item1: {
     backgroundColor: "red",
